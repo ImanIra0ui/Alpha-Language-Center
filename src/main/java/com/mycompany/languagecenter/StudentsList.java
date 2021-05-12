@@ -37,6 +37,7 @@ public class StudentsList extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+<<<<<<< HEAD
          out.println("<!DOCTYPE html>");
                out.println("<html>");
       out.println("<head>");
@@ -59,6 +60,16 @@ public class StudentsList extends HttpServlet {
             out.println("<div class=\"errorpic\"><img src=\"error.png\" alt=\"Girl in a jacket\" width=\"300\" height=\"320\"></div>");
             out.println("<h1 class=\"error\">OOPS...</h1>");
             out.println("<h1 class=\"smtg2 error\">something went wrong!</h1>");
+=======
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet StudentsList</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet StudentsList at " + request.getContextPath() + "</h1>");
+>>>>>>> first
             out.println("</body>");
             out.println("</html>");
         }
@@ -78,7 +89,10 @@ public class StudentsList extends HttpServlet {
         writer.println("<html>");
            writer.println("<head>");
             writer.println("<link rel=\"stylesheet\" href=\"choice.css\">\n");
+<<<<<<< HEAD
                writer.println(" <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"logo.PNG\" >\n");
+=======
+>>>>>>> first
         writer.append("<link href=\"https://fonts.googleapis.com/css2?family=Courgette&display=swap\" rel=\"stylesheet\">\n" +
 "");
         writer.println(" <script> function validateForm() {\n" +
@@ -121,7 +135,11 @@ public class StudentsList extends HttpServlet {
                         writer.println("<input  class='nav-element' type='submit' name='courses' value='My Courses'>");
                         writer.println("</form>");
                         writer.println("<br><br><br><br><br><br><br>");
+<<<<<<< HEAD
                         writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i><a href=\"index.html\">Log out</a></div>");
+=======
+                        writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i>  Log out</div>");
+>>>>>>> first
                         writer.println("</div>");
         try {
             Context ctx = new InitialContext();
@@ -158,9 +176,23 @@ public class StudentsList extends HttpServlet {
                             Statement stmt2 = conn.createStatement();
                             ResultSet rst = stmt2.executeQuery(query);
                             if(rst.next()) {
+<<<<<<< HEAD
                                
 
                                 flag=1;
+=======
+                                flag=1;
+                                writer.println("Section average:");
+                                String query3 = "SELECT calculateAvgSection("+ r.getString(2) +"::smallint,'"+ r.getString(1) +"'::varchar(20));";
+                                Statement stmt3 = conn.createStatement();
+                                ResultSet rst4 = stmt3.executeQuery(query3);
+                                
+                                if(rst4.next()) {
+                                    writer.println(rst4.getFloat(1));
+                                }
+                                
+                                
+>>>>>>> first
                                 writer.println("<div class=\"caption\">List of the students enrolled in this section</div>"); 
                                 writer.println("<table id=\"customers\">"); 
                                 writer.println("<tr><th>First Name:</th><th>Last Name:</th><th>Overall Grade:</th><tr>");
@@ -176,6 +208,7 @@ public class StudentsList extends HttpServlet {
                                 else
                                     writer.println("<tr><td>" + rst.getString(1) + "</td><td>" + rst.getString(2) + "</td><td>" + rst.getString(3) + "</td></tr>"); 
                             }
+<<<<<<< HEAD
                     
                             writer.println("</table>"); 
                              if(flag==1){
@@ -190,6 +223,11 @@ public class StudentsList extends HttpServlet {
                                  writer.println("</h>");}
                             if(flag==0)
                                 writer.println("<h class=\"caption\">No students currently enrolled!</h>");
+=======
+                            writer.println("</table>"); 
+                            if(flag==0)
+                                writer.println("No students currently enrolled!");
+>>>>>>> first
                             
                         }
                     }
@@ -202,6 +240,7 @@ public class StudentsList extends HttpServlet {
         writer.println(e.toString());
         }
     }
+<<<<<<< HEAD
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -228,6 +267,9 @@ public class StudentsList extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+=======
+
+>>>>>>> first
   
 
 }

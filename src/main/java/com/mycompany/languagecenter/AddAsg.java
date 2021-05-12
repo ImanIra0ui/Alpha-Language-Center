@@ -15,10 +15,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.naming.*;
 import javax.sql.*;
 import java.sql.*;
+<<<<<<< HEAD
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
+=======
+>>>>>>> first
 
 /**
  *
@@ -42,6 +45,7 @@ public class AddAsg extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+<<<<<<< HEAD
            out.println("<!DOCTYPE html>");
                out.println("<html>");
       out.println("<head>");
@@ -64,6 +68,15 @@ public class AddAsg extends HttpServlet {
             out.println("<div class=\"errorpic\"><img src=\"error.png\" alt=\"Girl in a jacket\" width=\"300\" height=\"320\"></div>");
             out.println("<h1 class=\"error\">OOPS...</h1>");
             out.println("<h1 class=\"smtg2 error\">something went wrong!</h1>");
+=======
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet AddAsg</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet AddAsg at " + request.getContextPath() + "</h1>");
+>>>>>>> first
             out.println("</body>");
             out.println("</html>");
         }
@@ -84,7 +97,11 @@ public class AddAsg extends HttpServlet {
          
         // read form fields
         username = request.getParameter("username");
+<<<<<<< HEAD
         
+=======
+        i = Integer.parseInt(username);
+>>>>>>> first
  
         // do some processing here...
          
@@ -95,7 +112,10 @@ public class AddAsg extends HttpServlet {
            writer.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\">\n" +
 "    <link rel=\"stylesheet\" href=\"http://weareoutman.github.io/clockpicker/dist/bootstrap-clockpicker.min.css\">\n" +
 "    <link rel=\"stylesheet\" href=\"choice.css\">\n" +
+<<<<<<< HEAD
                    " <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"logo.PNG\" />"+
+=======
+>>>>>>> first
 "    <script src=\"http://code.jquery.com/jquery-2.2.0.min.js\"></script>\n" +
 "    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"></script>\n" +
 "    <script src=\"http://weareoutman.github.io/clockpicker/dist/bootstrap-clockpicker.min.js\"></script>");
@@ -112,7 +132,11 @@ public class AddAsg extends HttpServlet {
 "            <a ref=\"#home\"><i class=\"fa fa-home\"></i> Home</a>\n" +
 "          </div>");
             
+<<<<<<< HEAD
         writer.println("<body>");
+=======
+        writer.println("<body>");   
+>>>>>>> first
                         writer.println("<div id=\"sideBar\">");
                              
                         writer.println("<form method='post' action='./ProfChoice'>");
@@ -130,8 +154,12 @@ public class AddAsg extends HttpServlet {
                         writer.println("<input  class='nav-element' type='submit' name='courses' value='My Courses'>");
                         writer.println("</form>");
                         writer.println("<br><br><br><br><br><br><br>");
+<<<<<<< HEAD
                       writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i><a href=\"index.html\">Log out</a></div>");
 
+=======
+                        writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i>  Log out</div>");
+>>>>>>> first
                         writer.println("</div>");
        
         try {
@@ -145,6 +173,7 @@ public class AddAsg extends HttpServlet {
             if (ds != null) {
                 Connection conn = ds.getConnection();
                 if (conn != null) {
+<<<<<<< HEAD
                     if(request.getParameter("added")!=null) {
                         Statement stmt = conn.createStatement();
                     String query = "Insert into Assignment (title,description,weight,"
@@ -185,6 +214,8 @@ public class AddAsg extends HttpServlet {
                         
                     
                     
+=======
+>>>>>>> first
                     Statement stmt = conn.createStatement();
                     String query = "SELECT moduleName, sectionNumber, year, trimester FROM section AS S INNER JOIN Professor AS P"
                             + " ON S.professorId = P.userID"
@@ -203,9 +234,13 @@ public class AddAsg extends HttpServlet {
                             writer.println(r.getString(1));
                             writer.println(r.getString(2));
                              writer.println("</div>");
+<<<<<<< HEAD
                             writer.println("<form name='myForm' action='AddAsg' onsubmit=\"alert ('Added successfully!');\" method='post' required>\n");
                             writer.println("<input type='hidden' placeholder ='username2' name='"+ r.getString(1) +"' value =  '"+ r.getString(1) +"'>");
                             writer.println("<input type='hidden' placeholder ='username2' name='"+ r.getString(2) +"' value =  '"+ r.getString(2) +"'>");
+=======
+                            writer.println("<form name='myForm' action='added' onsubmit=\"alert ('Added successfully!');\" method='post' required>\n");
+>>>>>>> first
                             writer.println("<input type='hidden' placeholder ='username2' name='username' value =  '"+ username +"'>");
                             writer.println("<br> <h class=\"cap2\">Title: </h><input type='text' name='title' required>");
                             writer.println("<br> <h class=\"cap2\">Weight:       </h><input type='text' name='weight' required>");
@@ -219,7 +254,10 @@ public class AddAsg extends HttpServlet {
                             "    \n" +
                             "    <script src=\"script.js\"></script>");
                             writer.println("<input type='hidden' name='year' value = '" + r.getString(3) + "'>");
+<<<<<<< HEAD
                             writer.println("<input type='hidden' name='added' value = '" + r.getString(3) + "'>");
+=======
+>>>>>>> first
                             writer.println("<input type='hidden' name='trimester' value = '" + r.getString(4) + "'>");
                             writer.println("<h class=\"cap2\"> Description: </h> <br><textarea type='text' name='desc'></textarea><br>\n");
                             writer.println("<input type = 'submit' value='Submit' class='button btnPush btnLightBlue'>"
@@ -237,6 +275,7 @@ public class AddAsg extends HttpServlet {
         }
         writer.println("</body>");
     }
+<<<<<<< HEAD
     
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -264,6 +303,8 @@ public class AddAsg extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+=======
+>>>>>>> first
 
     
 }

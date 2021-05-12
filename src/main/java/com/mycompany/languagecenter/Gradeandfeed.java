@@ -39,6 +39,7 @@ public class Gradeandfeed extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+<<<<<<< HEAD
   out.println("<!DOCTYPE html>");
                out.println("<html>");
       out.println("<head>");
@@ -61,6 +62,16 @@ public class Gradeandfeed extends HttpServlet {
             out.println("<div class=\"errorpic\"><img src=\"error.png\" alt=\"Girl in a jacket\" width=\"300\" height=\"320\"></div>");
             out.println("<h1 class=\"error\">OOPS...</h1>");
             out.println("<h1 class=\"smtg2 error\">something went wrong!</h1>");
+=======
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet Gradeandfeed</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet Gradeandfeed at " + request.getContextPath() + "</h1>");
+>>>>>>> first
             out.println("</body>");
             out.println("</html>");
         }
@@ -71,12 +82,17 @@ public class Gradeandfeed extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // read form fields
+<<<<<<< HEAD
          
           username = request.getParameter("username");
+=======
+          
+>>>>>>> first
         // get response writer
         PrintWriter writer = response.getWriter();
         writer.println("<html>");
            writer.println("<head>");
+<<<<<<< HEAD
              writer.println("<link rel=\"stylesheet\" href=\"choice.css\">\n");
                 writer.println(" <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"logo.PNG\" >\n");
         writer.append("<link href=\"https://fonts.googleapis.com/css2?family=Courgette&display=swap\" rel=\"stylesheet\">\n" +
@@ -113,6 +129,14 @@ public class Gradeandfeed extends HttpServlet {
                       writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i><a href=\"index.html\">Log out</a></div>");
                         writer.println("</div>");
                  
+=======
+            writer.println("<link rel=\"stylesheet\" href=\"choice.css\">\n");
+        writer.append("<link href=\"https://fonts.googleapis.com/css2?family=Courgette&display=swap\" rel=\"stylesheet\">\n" +
+"");
+        
+        writer.println("</head>");
+        writer.println("<body>");
+>>>>>>> first
        
         try {
             Context ctx = new InitialContext();
@@ -125,6 +149,7 @@ public class Gradeandfeed extends HttpServlet {
             if (ds != null) {
                 Connection conn = ds.getConnection();
                 if (conn != null) {
+<<<<<<< HEAD
                     if(request.getParameter("courses")!=null) {
                         String sID = request.getParameter("StudentID");
                     String assID = request.getParameter("asgId");
@@ -151,6 +176,8 @@ public class Gradeandfeed extends HttpServlet {
                     Statement stmt2 =conn.createStatement();
                     ResultSet r3 = stmt2.executeQuery(query);
                     }
+=======
+>>>>>>> first
                    String query = "SELECT DISTINCT(S.userID), Su.answer, S.lastName, S.firstName, grade, feedback, A.assignmentID \n" +
                     " FROM Student AS S INNER JOIN Enroll AS E \n" +
                     " ON E.studentID = S.userID\n" +
@@ -174,6 +201,7 @@ public class Gradeandfeed extends HttpServlet {
                                 writer.println("No submission has been made yet by this student!");
                             }
                             else {
+<<<<<<< HEAD
                                 username = request.getParameter("username");
                                   writer.println("<div class=\"boxy2\">");
                                writer.println("<div class=\"frm\">");
@@ -195,6 +223,21 @@ public class Gradeandfeed extends HttpServlet {
                                 writer.println("</form>");
                                 writer.println("</div>");
                                 writer.println("</dv>");
+=======
+                                writer.println("<form method='post' action='./ModifyGF' onsubmit=\"alert ('Modified successfully!');\">");
+                                writer.println("<input type='hidden' name='StudentID' value =  '" + r3.getString(1) + "' >");
+                                writer.println("<input type='hidden' name='asgId' value =  '" + r3.getString(7) + "' >");
+                                writer.println("<input type='hidden' name='course' value =  '" + request.getParameter("course") + "' >");
+                                writer.println("<input type='hidden' name='section' value =  '" + request.getParameter("section") + "' >");
+                                writer.println("<br>Student ID: " + r3.getString(1));
+                                writer.println("<br>Full Name:" + r3.getString(3) + " "+ r3.getString(4));
+                                writer.println("<br>Answer:" + r3.getString(2));
+                                
+                                writer.println("<br><br>Grade: <input type='number' name='grade' value =  '" + r3.getFloat(5) + "' required>");
+                                writer.println("<br><br> Feedback: <textarea name='feedback' >" + r3.getString(6) + "</textarea>");
+                                writer.println("<br><br><input  class='block' type='submit' name='courses' value='Modify grade and feedback'>");
+                                writer.println("</form>");
+>>>>>>> first
                             }
                         }
                     }
@@ -209,6 +252,7 @@ public class Gradeandfeed extends HttpServlet {
         writer.println(e.toString());
         }
     }
+<<<<<<< HEAD
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -235,6 +279,8 @@ public class Gradeandfeed extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+=======
+>>>>>>> first
 
   
 

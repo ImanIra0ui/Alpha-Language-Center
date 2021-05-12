@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js" integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA==" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/9562af5d6b.js"></script>
+    <title>Landing Page</title>
+</head>
+<body>
+    <div class="forms">
+        <div class="container" id="container">
+         <div class="form-container sign-up-container">
+              <form class="login-form" name="loginForm" method="post" action="ProfPortal">
+                 <h1>Hello professor!</h1>
+                
+  
+                 <input type="text" placeholder="username"  name="ID"/>
+                 <input type="password" placeholder="Password"  name="password" />
+                 <input type="submit" value="Log in"  name="password" class="button btnPush btnLightBlue">
+
+                 
+               
+             </form>
+         </div>
+         <div class="form-container sign-in-container">
+                 <form class="login-form" name="loginForm" method="post" action="StudentPortal">
+                 <h1>Hello student!</h1>
+                 <h1>Log in</h1>
+                 <input type="text" placeholder="username"  name="ID"/>
+                 <input type="password" placeholder="Password"  name="password" />
+                 <input type="submit" value="Log in"  name="password" class="button btnPush btnLightBlue">
+                 </form>
+         </div>
+        <div class="overlay-container">
+            <div class="curve">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#52B788" fill-opacity="1" d="M0,320L26.7,304C53.3,288,107,256,160,218.7C213.3,181,267,139,320,106.7C373.3,75,427,53,480,85.3C533.3,117,587,203,640,213.3C693.3,224,747,160,800,144C853.3,128,907,160,960,170.7C1013.3,181,1067,171,1120,144C1173.3,117,1227,75,1280,96C1333.3,117,1387,203,1413,245.3L1440,288L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+            </div>
+             <div class="overlay">
+                 <div class="overlay-panel overlay-left">
+                     <h1>Oops! are you a student?</h1>
+                     <p>Switch to student log in page</p>
+                     <button class="ghost" id="signIn">Student</button>
+                 </div>
+                 <div class="overlay-panel overlay-right">
+                     <h1>Oops! are you a professor?</h1>
+                     <p>Switch to professor log in page </p>
+                     <button class="ghost" id="signUp">Professor</button>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <script>
+    document.addEventListener('DOMContentLoaded',function(){
+        const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+    
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+    
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+    })
+    
+        </script>
+ </body>
+ </html>

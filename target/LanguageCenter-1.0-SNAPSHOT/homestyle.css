@@ -1,0 +1,261 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 30, 2021, 10:35:14 PM
+    Author     : SHSS
+*/
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("https://eitrawmaterials.eu/wp-content/uploads/2019/05/Label-brochure-1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: opacity(80%);
+}
+body {
+  font-size: 18px;
+  
+  background-color: rgba(42, 48, 54, 0.5);
+
+}
+h1{
+    font-family: 'Courgette', cursive;
+    color: rgba(240, 248, 255, 0.795);
+    font-size: 300%;
+}
+.shap{
+    background-color: transparent;
+    height: 15vh;
+    width: 100%;
+}
+.wrapper {
+  width: auto;
+  height: 70vh;
+ 
+}
+.topnav {
+    background-color:rgba(36, 113, 163,0.7);
+    overflow: hidden;
+    height: 10vh;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 19px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 1Ovh;
+    padding-bottom: 35px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color:  rgba(240, 248, 255, 0.795);
+    color:   #092d44;;
+  }
+  #logo{
+font-family:'Courgette', cursive;
+float: left;
+color: #f2f2f2;
+margin-left: 12px;
+margin-top: 10px;
+  }
+.Container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container2{
+  padding-top: 2em;
+  margin-top: 1em;
+  border-top: 
+    solid
+    1px
+    rgba(240, 248, 255, 0.795);
+  padding-left: 40px;
+  
+}
+
+button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  color: black;
+  background-color:  #2471A3;
+  padding: 20px 30px;
+  margin: 50px 5px 0;
+  border: none;
+  cursor: pointer;
+}
+a.button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 220px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  color: rgba(240, 248, 255, 0.795);
+  transition: all 0.2s ;
+}
+.btnBlueGreen {
+  color:rgba(240, 248, 255, 0.795);
+  background: #1F618D  ;
+}
+
+.btnLightBlue {
+  color: rgba(240, 248, 255, 0.795);
+  background: #1F618D ;
+}
+.btnBlueGreen.btnPush {
+  box-shadow:  0px 5px 0px 0px #1A5276;
+}
+
+.btnLightBlue.btnPush {
+  box-shadow:  0px 5px 0px 0px #1A5276;
+}
+.btnPush:hover {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.btnBlueGreen.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px #1A5276;
+}
+
+.btnLightBlue.btnPush:hover {
+  box-shadow:0px 0px 0px 0px #1A5276;
+}
+
+#explanation {
+  
+  font-weight: bold;
+  text-align: center;
+}
+#explanation p {
+  color: rgba(240, 248, 255, 0.795);
+ 
+  font-size: 25px;
+}
+/*
+.cadre{
+    background-color: rgba(175, 181, 183, 0.7);
+}
+/*
+.cadre{
+    background-color: rgba(0,0, 0, 0.2);
+}*/
+#flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* button styles */
+#addFirstParam {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color:black;
+  min-width: 150px;
+  background-color: black; 
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+#addSecondParam {
+  display: flex;
+  justify-content: center;
+  min-width: 150px;
+  border: 2px solid black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: #d93415;
+  color: white;
+  background-color: #d93415;
+}
+
+/* popup screen overlay - display none by default */
+#popup-wrapper {
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#close-popup:after {
+ content: 'x';
+ font-weight: 300;
+ font-family: Arial, sans-serif;
+}
+#close-popup {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* popup model styles */
+#popup {
+  position: absolute;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  cursor: pointer;
+}
+#text {
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 1000px) {
+  #explanation, #explanation p {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+  }
+  #explanation h1 {
+    font-size: 20px;
+  }
+  
+}
+

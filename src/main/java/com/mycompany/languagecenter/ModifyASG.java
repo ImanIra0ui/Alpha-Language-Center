@@ -15,8 +15,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.naming.*;
 import javax.sql.*;
 import java.sql.*;
+<<<<<<< HEAD
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+=======
+
+>>>>>>> first
 /**
  *
  * @author SHSS
@@ -24,7 +28,10 @@ import java.time.LocalDate;
 @WebServlet(name = "ModifyASG", urlPatterns = {"/ModifyASG"})
 public class ModifyASG extends HttpServlet {
     String username;
+<<<<<<< HEAD
     int i;
+=======
+>>>>>>> first
     
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,6 +47,7 @@ public class ModifyASG extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+<<<<<<< HEAD
   out.println("<!DOCTYPE html>");
                out.println("<html>");
       out.println("<head>");
@@ -62,6 +70,15 @@ public class ModifyASG extends HttpServlet {
             out.println("<div class=\"errorpic\"><img src=\"error.png\" alt=\"Girl in a jacket\" width=\"300\" height=\"320\"></div>");
             out.println("<h1 class=\"error\">OOPS...</h1>");
             out.println("<h1 class=\"smtg2 error\">something went wrong!</h1>");
+=======
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ModifyASG</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet ModifyASG at " + request.getContextPath() + "</h1>");
+>>>>>>> first
             out.println("</body>");
             out.println("</html>");
         }
@@ -75,7 +92,10 @@ public class ModifyASG extends HttpServlet {
                PrintWriter writer = response.getWriter();
         writer.println("<html>");
            writer.println("<head>");
+<<<<<<< HEAD
               writer.println(" <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"logo.PNG\" >\n");
+=======
+>>>>>>> first
            writer.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\">\n" +
 "    <link rel=\"stylesheet\" href=\"http://weareoutman.github.io/clockpicker/dist/bootstrap-clockpicker.min.css\">\n" +
 "    <link rel=\"stylesheet\" href=\"choice.css\">\n" +
@@ -113,7 +133,11 @@ public class ModifyASG extends HttpServlet {
                         writer.println("<input  class='nav-element' type='submit' name='courses' value='My Courses'>");
                         writer.println("</form>");
                         writer.println("<br><br><br><br><br><br><br>");
+<<<<<<< HEAD
                         writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i><a href=\"index.html\">Log out</a></div>");
+=======
+                        writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i>  Log out</div>");
+>>>>>>> first
                         writer.println("</div>");
        
         try {
@@ -127,6 +151,7 @@ public class ModifyASG extends HttpServlet {
             if (ds != null) {
                 Connection conn = ds.getConnection();
                 if (conn != null) {
+<<<<<<< HEAD
                     if(request.getParameter("modified")!=null) {
                          
                     String id = request.getParameter("asID");
@@ -170,10 +195,15 @@ public class ModifyASG extends HttpServlet {
                     
                     }
                     writer.println(i);
+=======
+                    String assID = request.getParameter("assId");
+                    int i = Integer.parseInt(assID);
+>>>>>>> first
                     String query="SELECT assignmentId, title, weight, sectionNumber, moduleName, year, trimester, description, deadlineday, deadlinetime "
                             + " FROM Assignment WHERE AssignmentId=" + i+ ";";
                     Statement stmt = conn.createStatement();
                     ResultSet r= stmt.executeQuery(query);
+<<<<<<< HEAD
                    
                     if(r.next()) {
                        
@@ -182,6 +212,14 @@ public class ModifyASG extends HttpServlet {
                         writer.println("<form name='myForm' action='./ModifyASG' onsubmit=\"alert ('Modified successfully!');\" method='post'>\n");
                         writer.println("<input type='hidden' placeholder ='modified' name='modified' value = '" + username +"'>"); 
                         writer.println("<input type='hidden' placeholder ='username2' name='username' value = '" + username +"'>");
+=======
+                    
+                    if(r.next()) {
+                              writer.println("<div class=\"boxy2\">");
+                              writer.println("<div class=\"frm\">");
+                        writer.println("<form name='myForm' action='./Modified' onsubmit=\"alert ('Modified successfully!');\" method='post'>\n");
+                         writer.println("<input type='hidden' placeholder ='username2' name='username' value = '" + username +"'>");
+>>>>>>> first
                         writer.println("<input type='hidden' name='asID' value = '" + i+ "'>");
                         writer.println("<br> <h class=\"cap2\">Title: </h><input type='text' name='title' value = '" + r.getString(2) + "'>");
                         writer.println("<br> <h class=\"cap2\">Weight:       </h><input type='number' name='weight' value = '" + r.getInt(3) + "'>");
@@ -212,6 +250,7 @@ public class ModifyASG extends HttpServlet {
         }
         writer.println("</body>");
     }
+<<<<<<< HEAD
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -238,6 +277,8 @@ public class ModifyASG extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+=======
+>>>>>>> first
 
     
 }

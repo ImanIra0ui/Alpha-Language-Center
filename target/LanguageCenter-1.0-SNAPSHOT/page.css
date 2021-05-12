@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700');
+
+html{
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://eitrawmaterials.eu/wp-content/uploads/2019/05/Label-brochure-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: opacity(80%);
+  padding: 0;
+}
+
+* {
+  font-family: Open Sans;
+}
+.name {
+  /*border-bottom: 1px solid #f2f2f2;*/
+ margin-left: 25%;
+  width:34%;
+  height: 86%;
+  text-align: left;
+}
+
+.name h1{
+ color: #f2f2f2;
+ margin-left: 10px;
+}
+body{
+  margin: 0;
+  height: 100vh;
+  background-color: rgba(38, 40, 43, 0.65);
+}
+#sideBar{
+   font-family:sans-serif;
+   width: 265x;
+   float:  left;
+   background-color: rgba(38, 40, 43, 0.8);
+   height: 89%;
+   
+  }
+  .topnav {
+    background-color:rgba(36, 113, 163,0.7);
+    overflow: hidden;
+    height: 10vh;
+    margin: 0;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 19px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    height: 1Ovh;
+    padding-bottom: 35px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color:  rgba(240, 248, 255, 0.795);
+    color:   #092d44;
+  }
+  #logo{
+    font-size: 30px;
+    font-family: 'Courgette', cursive;
+    float: left;
+    color: #f2f2f2;
+    margin-left: 19px;
+    margin-top: 14px;
+  }
+  .bottom{
+    font-size: 23px;
+    font-weight: 400;
+    color:   rgba(240, 248, 255);
+    width: 230px;
+    margin: 20px;
+    padding: 10px;
+    vertical-align: middle;
+    border-top: 1px solid     rgba(240, 248, 255);    
+
+  }
+  .bottom:hover{
+    background:rgba(36, 113, 163,0.6);
+    color: rgba(36, 113, 163);
+    color: #f2f2f2;
+  }
+  .nav-element{
+    font-size: 23px;
+    font-weight: 400;
+    width: 230px;
+    color:  rgba(240, 248, 255, 0.795);
+    margin: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    vertical-align: middle;
+
+  }
+  .nav-element:hover{
+
+    background:rgba(36, 113, 163,0.6);
+    border-radius: 25px;
+    color: #f2f2f2;  }
+
+  .nav-element img{
+    height: 3rem;
+    width:  3rem;
+    border-radius: 150px;
+    flex:1;
+  }
+  .nav-element span{
+    font-size: 20px;
+    margin-left: 15px;
+    flex:3;
+  }
+  .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: rgba(38, 40, 43, 0.95);
+  height: 40vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed{
+	background: #666;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  rgba(36, 113, 163);
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  rgba(36, 113, 163);
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+nav{
+  width:100%;
+  background: -webkit-linear-gradient(right, #2471A3,#7FB3D5);
+  background: -moz-linear-gradient(right, #2471A3,#7FB3D5);
+  background: -o-linear-gradient(right,#2471A3, #7FB3D5);
+  background: linear-gradient(to left,#2471A3,#7FB3D5);
+  opacity: 0.7;
+  position:fixed;
+  top:0;
+  height:100px;
+  display:flex;
+  justify-content:center;
+  color:#154360;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input[type="submit"] {
+	background: none;
+	background-color:  transparent;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.block{
+    display: inline-block;
+}
+
+section{
+  background: #848a81;
+  background: -webkit-linear-gradient(right, #2471A3,#7FB3D5);
+  background: -moz-linear-gradient(right, #2471A3,#7FB3D5);
+  background: -o-linear-gradient(right,#2471A3, #7FB3D5);
+  background: linear-gradient(to left,#2471A3,#7FB3D5);
+  height: calc(100% - 50px);
+  top:50px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:-1;
+}
+
+h1{
+  margin:0;
+  font-size:50px;
+  font-family: arial;
+  text-align:center;
+  color:white;
+
+  font-family: fantasy;
+}
+
+label{
+  display:none;
+}
+
+
+nav li{
+  display:inline;
+}
+
+#nav-button{
+  display:none;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  font-family:arial;
+  padding:0px 10px;
+}
+
+
+@media only screen 
+  and (max-width: 736px) 
+  and (orientation: portrait) {
+    nav{
+      align-items:center;
+    }
+    
+    nav ul{
+      position:absolute;
+      top:34px;
+      width:100%;
+      background:#4a0060;
+      max-height: 0;
+      transition: max-height 0.15s ease-out;
+      overflow:hidden;
+      transition:all 1s ease-in-out;
+    }
+    
+    nav li{
+      display:block;
+      width:100%;
+      padding:5px;  
+
+    }
+    
+    label{
+      display:block;
+      padding:0px 10px;
+      font-size:30px;
+      cursor:pointer;
+    }
+    
+    label:hover{
+      color:white;
+    }
+    
+    nav a{
+      width:100%;
+      display:block;
+    }
+    
+    #nav-button:checked ~ ul{
+        max-height:540px;
+        transition: all 1s ease-in-out;
+    }
+   
+}
+
+

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> first
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -34,6 +37,7 @@ public class ProfAsgInfo extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+<<<<<<< HEAD
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -64,6 +68,23 @@ public class ProfAsgInfo extends HttpServlet {
             out.println("</html>");
         }
     }
+=======
+    /*protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ProfAsgInfo</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet ProfAsgInfo at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        }
+    }*/
+>>>>>>> first
 
   
     @Override
@@ -78,7 +99,10 @@ public class ProfAsgInfo extends HttpServlet {
         writer.println("<html>");
            writer.println("<head>");
             writer.println("<link rel=\"stylesheet\" href=\"choice.css\">\n");
+<<<<<<< HEAD
                writer.println(" <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"logo.PNG\" >\n");
+=======
+>>>>>>> first
         writer.append("<link href=\"https://fonts.googleapis.com/css2?family=Courgette&display=swap\" rel=\"stylesheet\">\n" +
 "");
         
@@ -111,8 +135,13 @@ public class ProfAsgInfo extends HttpServlet {
 "            <a href=\"#contact\">about</a>\n" +
 "            <a ref=\"#home\"><i class=\"fa fa-home\"></i> Home</a>\n" +
 "          </div>");
+<<<<<<< HEAD
             writer.println("<body class=\"len\">");   
                         writer.println("<div id=\"sideBar\" class=\"len\">");
+=======
+            writer.println("<body>");   
+                        writer.println("<div id=\"sideBar\">");
+>>>>>>> first
                              
                         writer.println("<form method='post' action='./ProfChoice'>");
                         writer.println("<input type='hidden' placeholder ='username2' name='username' value =  '"+ username +"'>");
@@ -129,7 +158,11 @@ public class ProfAsgInfo extends HttpServlet {
                         writer.println("<input  class='nav-element' type='submit' name='courses' value='My Courses'>");
                         writer.println("</form>");
                         writer.println("<br><br><br><br><br><br><br>");
+<<<<<<< HEAD
                         writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i><a href=\"index.html\">Log out</a></div>");
+=======
+                        writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i>  Log out</div>");
+>>>>>>> first
                         writer.println("</div>");
                  
        
@@ -144,7 +177,11 @@ public class ProfAsgInfo extends HttpServlet {
             if (ds != null) {
                 Connection conn = ds.getConnection();
                 if (conn != null) {
+<<<<<<< HEAD
                  
+=======
+                   
+>>>>>>> first
                     
                     Statement stmt = conn.createStatement();
                     String query = "SELECT title, weight, deadlineday, deadlinetime, description, assignmentID, moduleName, sectionNumber \n" +
@@ -176,12 +213,16 @@ public class ProfAsgInfo extends HttpServlet {
                             writer.println("<h class=\"cap2\"> Due time </h>");
                             writer.println("<h>" + rst.getString(4) + " </h><br><br>");
                             writer.println("<h class=\"cap2\"> Description </h>");
+<<<<<<< HEAD
                             
                             if(rst.getString(5)!=null && !(rst.getString(5).trim().isEmpty()))
                                 writer.println("<h>" + rst.getString(5) + " </h><br><br>");
                             else
                                 writer.println("<h> -- </h><br><br>");
                             
+=======
+                            writer.println("<h>" + rst.getString(5) + " </h><br><br>");
+>>>>>>> first
                             writer.println("<h class=\"cap2\"> Class average </h>");
                             int asId = rst.getInt(6);
                             
@@ -196,12 +237,17 @@ public class ProfAsgInfo extends HttpServlet {
                                 else
                                     writer.println("<h> -- </h><br><br>");
                             }
+<<<<<<< HEAD
                             writer.println("<div class=\"grid\">");
                             writer.println("<div class=\"itom\">");
+=======
+                            
+>>>>>>> first
                             writer.println("<form method='post' action='ModifyASG'>");
                             writer.println("<input type='hidden' name='assId' value='" + asId + "'>");
                             writer.println("<input type='hidden' name='username' value='" + username + "'>");
                             writer.println("<input type='Submit' class='button btnPush btnLightBlue' value='Modify assignment information'>");
+<<<<<<< HEAD
                             writer.println("</form>");  
                             
                             writer.println("<div class=\"itom\">");
@@ -220,6 +266,18 @@ public class ProfAsgInfo extends HttpServlet {
                             writer.println("</div>"); 
                             writer.println("</div>"); 
                             writer.println("</div>"); 
+=======
+                            writer.println("</form>");           
+                            writer.println("<form method='post' action = 'delete' onSubmit=\"return confirm('Do you want to delete the assignment?')\" ;>");
+                            writer.println("<input type='hidden' name='" + rst.getString(7) + "' value='" + rst.getString(7) + "'>");
+                            writer.println("<input type='hidden' name='" + rst.getString(8) + "' value='" + rst.getString(8)  + "'>");
+                            writer.println("<input type='hidden' name='assId' value='" + asId + "'>");
+                            writer.println("<input type='hidden' name='username' value='" + username + "'>");
+                            writer.println("<input type='Submit' class='button btnPush btnLightBlue' value='Delete Assignment'>");
+                            writer.println("</form>");
+                              writer.println("</div>"); 
+                          writer.println("</div>"); 
+>>>>>>> first
                             query = "SELECT S.firstName, S.lastName, S.userID \n" +
                             "FROM Student AS S INNER JOIN Enroll AS E ON E.studentID = S.userID "
                                     + "NATURAL JOIN section " 
@@ -234,8 +292,13 @@ public class ProfAsgInfo extends HttpServlet {
                             ResultSet r2 = stmt2.executeQuery(query);
                             if(r2.next()) {
                                 flag=1;
+<<<<<<< HEAD
                                 writer.println("<button onclick=\"myFunction2()\">Students' grades<i class=\"fa fa-angle-double-down\"></i></button>");
                                 writer.println("<div id=\"myDIV2\">");
+=======
+                                writer.println("<button onclick=\"myFunction()\">Student's grades<i class=\"fa fa-angle-double-down\"></i></button>");
+                                writer.println("<div id=\"myDIV\">");
+>>>>>>> first
                                 writer.println("<table id=\"customers\">"); 
                                 writer.println("<tr><th>Last Name:</th><th>First Name:</th><th>Grade:</th><th>Feedback:</th><tr><br>");
                                 
@@ -253,36 +316,58 @@ public class ProfAsgInfo extends HttpServlet {
                                 " OR ((EXTRACT(MONTH FROM CURRENT_DATE) BETWEEN 06 AND 08) AND A.trimester = 'SU'))\n" +
                                 " AND A.assignmentId = "+ asId + ";\n" ;
                                 
+<<<<<<< HEAD
                                    writer.println("<div class=\"grid\">");
                             writer.println("<div class=\"itom\">");
+=======
+                                
+>>>>>>> first
                                 writer.println("<form method='post' action='ProfAsgInfo'>");
                                 writer.println("<input type='hidden' name='"+ asId +"' value='" + asId + "'>");
                                 writer.println("<input type='hidden' name='username' value='" + username + "'>");
                                 writer.println("<input type='hidden' name='course' value='" + request.getParameter("course") + "'>");
                                 writer.println("<input type='hidden' name='section' value='" + request.getParameter("section") + "'>");
+<<<<<<< HEAD
                                 writer.println("<input type='Submit' name='below' class='button btnPush btnLightBlue' value='Display grades below average'>");
                                 writer.println("</form>");  
                                  writer.println("</div>");
                                 
                                    writer.println("<div class=\"itom\">");
+=======
+                                writer.println("<input type='Submit' name='below' class='button btnPush btnLightBlue' value='Display grades below average.'>");
+                                writer.println("</form>");  
+                                
+>>>>>>> first
                                 writer.println("<form method='post' action='ProfAsgInfo'>");
                                 writer.println("<input type='hidden' name='"+ asId +"' value='" + asId + "'>");
                                 writer.println("<input type='hidden' name='username' value='" + username + "'>");
                                 writer.println("<input type='hidden' name='course' value='" + request.getParameter("course") + "'>");
                                 writer.println("<input type='hidden' name='section' value='" + request.getParameter("section") + "'>");
+<<<<<<< HEAD
                                 writer.println("<input type='Submit' name='above' class='button btnPush btnLightBlue' value='Display grades above average'>");
                                 writer.println("</form>");  
                                 writer.println("</div>");
                               writer.println("<div class=\"itom\">");
+=======
+                                writer.println("<input type='Submit' name='above' class='button btnPush btnLightBlue' value='Display grades above average.'>");
+                                writer.println("</form>");  
+                            
+>>>>>>> first
                                 writer.println("<form method='post' action='ProfAsgInfo'>");
                                 writer.println("<input type='hidden' name='"+ asId +"' value='" + asId + "'>");
                                 writer.println("<input type='hidden' name='username' value='" + username + "'>");
                                 writer.println("<input type='hidden' name='course' value='" + request.getParameter("course") + "'>");
                                 writer.println("<input type='hidden' name='section' value='" + request.getParameter("section") + "'>");
+<<<<<<< HEAD
                                 writer.println("<input type='Submit' name='normal' class='button btnPush btnLightBlue' value='Display grades of all students'>");
                                 writer.println("</form>");
                                 writer.println("</div>");
                                  writer.println("</div>");
+=======
+                                writer.println("<input type='Submit' name='normal' class='button btnPush btnLightBlue' value='Display grades of all students.'>");
+                                writer.println("</form>");
+                                
+>>>>>>> first
                                 ResultSet r3;
                                 
                                 Statement stmt3= conn.createStatement();
@@ -332,8 +417,12 @@ public class ProfAsgInfo extends HttpServlet {
                                    
                                     
                                     writer.println("<form method='post' action='Gradeandfeed'>");
+<<<<<<< HEAD
                                     writer.println("<input type='hidden' placeholder='username2' name='" + r3.getString(1) + "' value = '" + r3.getString(1) + "'>");
                                     writer.println("<input type='hidden' placeholder='username' name= 'username' value = '" + username + "'>");
+=======
+                                    writer.println("<input type='hidden' placeholder='username' name='" + r3.getString(1) + "' value = '" + r3.getString(1) + "'>");
+>>>>>>> first
                                     writer.println("<input type='hidden' placeholder='course' name='assId' value = '" + asId + "'>");
                                     writer.println("<input type='hidden' placeholder='section' name='section' value = '" + request.getParameter("section") + "'>");
                                     writer.println("<input type='hidden' placeholder='assId' name='course' value = '" + request.getParameter("course") + "'> ");
@@ -358,12 +447,20 @@ public class ProfAsgInfo extends HttpServlet {
                                        five=r3.getString(6);
                                     
                                     writer.println("<form method='post' action='Gradeandfeed'>");
+<<<<<<< HEAD
                                     writer.println("<input type='hidden' placeholder='username2' name='" + r3.getString(1) + "' value = '" + r3.getString(1) + "'>");
                                     writer.println("<input type='hidden' placeholder='assId' name='assId' value = '" + asId + "'>");
                                     writer.println("<input type='hidden' placeholder='section' name='section' value = '" + request.getParameter("section") + "'>");
                                     writer.println("<input type='hidden' placeholder='course' name='course' value = '" + request.getParameter("course") + "'> ");
                                     writer.println("<input type='hidden' placeholder='username' name= 'username' value = '" + username + "'>");
 
+=======
+                                    writer.println("<input type='hidden' placeholder='username' name='" + r3.getString(1) + "' value = '" + r3.getString(1) + "'>");
+                                    writer.println("<input type='hidden' placeholder='assId' name='assId' value = '" + asId + "'>");
+                                    writer.println("<input type='hidden' placeholder='section' name='section' value = '" + request.getParameter("section") + "'>");
+                                    writer.println("<input type='hidden' placeholder='course' name='course' value = '" + request.getParameter("course") + "'> ");
+                                   
+>>>>>>> first
                                         writer.println("<tr><td> <input type='submit' value = '" + r3.getString(3) + "'></td><td>" + r3.getString(4) + "</td>"
                                             + "<td>" + four + "</td><td>" + five + "</td></tr>");
                                      
@@ -383,7 +480,11 @@ public class ProfAsgInfo extends HttpServlet {
                             
                         }
                     if(flag==0)
+<<<<<<< HEAD
                                 writer.println("<h class=\"err\">No students currently enrolled!</h>");
+=======
+                                writer.println("No students currently enrolled!");
+>>>>>>> first
                         
                        
                     }
@@ -396,6 +497,7 @@ public class ProfAsgInfo extends HttpServlet {
         writer.println(e.toString());
         }
     }
+<<<<<<< HEAD
      /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -422,6 +524,8 @@ public class ProfAsgInfo extends HttpServlet {
         return "Short description";
     }// </editor-fold>
   
+=======
+>>>>>>> first
 
   
 

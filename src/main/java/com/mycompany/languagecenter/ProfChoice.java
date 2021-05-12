@@ -40,6 +40,7 @@ public class ProfChoice extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
+<<<<<<< HEAD
                out.println("<html>");
       out.println("<head>");
         out.println("<link rel=\"stylesheet\" href=\"choice.css\">\n");
@@ -61,6 +62,14 @@ public class ProfChoice extends HttpServlet {
             out.println("<div class=\"errorpic\"><img src=\"error.png\" alt=\"Girl in a jacket\" width=\"300\" height=\"320\"></div>");
             out.println("<h1 class=\"error\">OOPS...</h1>");
             out.println("<h1 class=\"smtg2 error\">something went wrong!</h1>");
+=======
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ProfChoice</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet ProfChoice at " + request.getContextPath() + "</h1>");
+>>>>>>> first
             out.println("</body>");
             out.println("</html>");
         }
@@ -81,7 +90,10 @@ public class ProfChoice extends HttpServlet {
         writer.println("<html>");
         writer.println("<head>");
         writer.println("<link rel=\"stylesheet\" href=\"choice.css\">\n");
+<<<<<<< HEAD
            writer.println(" <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"logo.PNG\" >\n");
+=======
+>>>>>>> first
         writer.println("<link href=\"https://fonts.googleapis.com/css2?family=Courgette&display=swap\" rel=\"stylesheet\">");
         
         
@@ -131,7 +143,11 @@ public class ProfChoice extends HttpServlet {
                         writer.println("<input  class='nav-element' type='submit' name='courses' value='My Courses'>");
                         writer.println("</form>");
                         writer.println("<br><br><br><br><br><br><br>");
+<<<<<<< HEAD
                         writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i><a href=\"index.html\">Log out</a></div>");
+=======
+                        writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i>  Log out</div>");
+>>>>>>> first
                         writer.println("</div>");
                  
                
@@ -225,18 +241,30 @@ public class ProfChoice extends HttpServlet {
                         writer.println("<br><br>");
                         writer.println("<div id=\"myDIV\">");
                         writer.println("<form method='post' action='changepass' onsubmit=\"alert ('Password changed successfully!');\">");
+<<<<<<< HEAD
                         writer.println("<label class=\"cap\">password :\n" +
                         "  <input name=\"password\" id=\"password\" type=\"password\" required>\n" +
                         "</label>\n" +
                         "<br><br>\n" +
                         "<label class=\"cap\">confirm password:\n" +
+=======
+                        writer.println("<label>password :\n" +
+                        "  <input name=\"password\" id=\"password\" type=\"password\" required>\n" +
+                        "</label>\n" +
+                        "<br><br>\n" +
+                        "<label>confirm password:\n" +
+>>>>>>> first
                         "  <input type=\"password\" name=\"confirm_password\" id=\"confirm_password\" required>\n" +
                         "  <span id='message'></span>"
                                                         + "<script src=\"pass.js\"></script>\n" +
                         "</label>");
                         writer.println("<input type='hidden' placeholder='username' name='username' value = " + username + ">");  
                         writer.println("<br><br>");
+<<<<<<< HEAD
                         writer.println("<input type='submit' name='professor' class='button btnPush btnLightBlue  middle' value = 'Submit changes'>");
+=======
+                        writer.println("<input type='submit' class='button btnPush btnLightBlue  middle' value = 'Submit changes'>");
+>>>>>>> first
                         writer.println("</form>");
                         writer.println("</div>");
                         writer.println("</div>");
@@ -271,7 +299,11 @@ public class ProfChoice extends HttpServlet {
                                 writer.println("<form method='post' action='ProfCourses'>");
                                 writer.println("<input type='hidden' placeholder='username' name='username' value = " + username + ">");
                                 writer.println("<input type='hidden' placeholder='section' name='" + rst.getString(2) + "' value = " +  rst.getString(2) + ">");
+<<<<<<< HEAD
                                 writer.println("<input type='submit' class='button btnPush btnLightBlue' name='" +  rst.getString(1) + "' value='" +  rst.getString(1) +" Section " + rst.getString(2) + "'>");
+=======
+                                writer.println("<input type='submit' class='button btnPush btnLightBlue' name='" +  rst.getString(1) + "' value=" +  rst.getString(1) +" Section " + rst.getString(2) + ">");
+>>>>>>> first
                                 writer.println("</form>");
                             
                                 writer.println("<br>");
@@ -302,6 +334,7 @@ public class ProfChoice extends HttpServlet {
     }
 
     }
+<<<<<<< HEAD
      // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -328,5 +361,7 @@ public class ProfChoice extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+=======
+>>>>>>> first
  
 }

@@ -15,11 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.naming.*;
 import javax.sql.*;
 import java.sql.*;
+<<<<<<< HEAD
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 
+=======
+>>>>>>> first
 
 
 /**
@@ -30,7 +33,10 @@ import java.util.Date;
 public class AssignmentInfo extends HttpServlet {
     String username;
     int i, flag, asId;
+<<<<<<< HEAD
     String course2;
+=======
+>>>>>>> first
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -44,6 +50,7 @@ public class AssignmentInfo extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+<<<<<<< HEAD
             out.println("<!DOCTYPE html>");
                out.println("<html>");
       out.println("<head>");
@@ -66,6 +73,16 @@ public class AssignmentInfo extends HttpServlet {
             out.println("<div class=\"errorpic\"><img src=\"error.png\" alt=\"Girl in a jacket\" width=\"300\" height=\"320\"></div>");
             out.println("<h1 class=\"error\">OOPS...</h1>");
             out.println("<h1 class=\"smtg2 error\">something went wrong!</h1>");
+=======
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet AssignmentInfo</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet AssignmentInfo at " + request.getContextPath() + "</h1>");
+>>>>>>> first
             out.println("</body>");
             out.println("</html>");
         }
@@ -78,7 +95,10 @@ public class AssignmentInfo extends HttpServlet {
         // read form fields
         username = request.getParameter("username");
         i = Integer.parseInt(username);
+<<<<<<< HEAD
         
+=======
+>>>>>>> first
  
         // do some processing here...
          
@@ -87,10 +107,16 @@ public class AssignmentInfo extends HttpServlet {
         writer.println("<html>");
            writer.println("<head>");
             writer.println("<link rel=\"stylesheet\" href=\"choice.css\">\n");
+<<<<<<< HEAD
                writer.println(" <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"logo.PNG\" >\n");
         writer.append("<link href=\"https://fonts.googleapis.com/css2?family=Courgette&display=swap\" rel=\"stylesheet\">\n" +
 "");
          
+=======
+        writer.append("<link href=\"https://fonts.googleapis.com/css2?family=Courgette&display=swap\" rel=\"stylesheet\">\n" +
+"");
+            writer.println("<link rel=\"stylesheet\" href=\"choice.css\">\n");
+>>>>>>> first
         writer.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"></script>");
         writer.println("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">");
                writer.println("<script src=\"pass.js\"></script>");
@@ -135,8 +161,12 @@ public class AssignmentInfo extends HttpServlet {
                     writer.println("<input  class='nav-element' type='submit' name='fee' value='My Fee Statements'>");
                     writer.println("</form>");
                     writer.println("<br><br><br><br>");
+<<<<<<< HEAD
                       writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i><a href=\"index.html\">Log out</a></div>");
 
+=======
+                    writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i>  Log out</div>");
+>>>>>>> first
                     writer.println("</div>");
        
         try {
@@ -150,6 +180,7 @@ public class AssignmentInfo extends HttpServlet {
             if (ds != null) {
                 Connection conn = ds.getConnection();
                 if (conn != null) {
+<<<<<<< HEAD
                     if(request.getParameter("submitted")!=null) {
                         username = request.getParameter("username");
                     int i = Integer.parseInt(username);
@@ -182,6 +213,8 @@ public class AssignmentInfo extends HttpServlet {
            
                     }
                     
+=======
+>>>>>>> first
                     Statement stmt = conn.createStatement();
                     String query = "SELECT title, weight, deadlineday, deadlinetime, description, assignmentID \n" +
                                     "FROM Assignment\n" +
@@ -197,8 +230,12 @@ public class AssignmentInfo extends HttpServlet {
                     while (rst.next()) {
                       
                         if(request.getParameter(rst.getString(6))!=null) {
+<<<<<<< HEAD
                              course2 = rst.getString(6);
                             writer.println("<br><h class=\"cap\" > Title: </h>");
+=======
+                            writer.println("<h class=\"cap\" > Title: </h>");
+>>>>>>> first
                             writer.println("<h>" + rst.getString(1) + " </h><br><br>");
                             writer.println("<h class=\"cap\"> Weight: </h>");
                             writer.println("<h>" + rst.getInt(2) + "%</h><br><br>");
@@ -227,15 +264,25 @@ public class AssignmentInfo extends HttpServlet {
                         if(rst3.getInt(1)!=0) {
                             writer.println("<br><h  class=\"cap\"> You have submitted an answer to this assignment </h><br><br>");
                             if(rst2.next()) {
+<<<<<<< HEAD
                                 if (rst2.getString(2)!=null) {
                                writer.println("<h class=\"cap\"> Grade: </h>"+ rst2.getFloat(2)+"</h><br><br>");
                            }
                                 if(rst2.getString(3)!=null) {
                                writer.println("<h class=\"cap\"> Feedback: </h>" + rst2.getString(3)+ "<br><br>");
+=======
+                                writer.println("<h class=\"cap\"> Your answer: </h><h>" + rst2.getString(1) + "</h><br><br><br>");
+                                if (rst2.getString(2)!=null) {
+                               writer.println("<h> Grade:"+ rst2.getFloat(2)+"</h><br>");
+                           }
+                                if(rst2.getString(3)!=null) {
+                               writer.println("<h> Feedback " + rst2.getString(3)+ "</h><br>");
+>>>>>>> first
                            }
                             }
                         }
                         else {
+<<<<<<< HEAD
                             writer.println("<form name='myForm' action='AssignmentInfo' onsubmit='return validateForm()' method='post' required>\n");
                             writer.println("<input type='hidden' placeholder='submitted' name='submitted' value = '" + username + "'>");
                             writer.println("<input type='hidden' placeholder='username' name='username' value = '" + username + "'>");
@@ -243,6 +290,10 @@ public class AssignmentInfo extends HttpServlet {
                               
                             writer.println("<input type='hidden' placeholder='course' name='"+ course2 +"' value = '"+course2 +"'>");
                              writer.println("<input type='hidden' placeholder='section' name='section' value = '" + request.getParameter("section") + "'>");
+=======
+                            writer.println("<form name='myForm' action='Submit' onsubmit='return validateForm()' method='post' required>\n");
+                            writer.println("<input type='hidden' placeholder='username' name='username' value = '" + username + "'>");
+>>>>>>> first
                             writer.println("<input type='hidden' placeholder='assid' name='assid' value = '" + asId + "'>");
 writer.println("  Answer: <br><textarea type='text' name='answer'></textarea><br>\n");
 writer.println("<input type = 'submit' value='Submit' class='button btnPush btnLightBlue'>"
@@ -262,6 +313,7 @@ writer.println("<input type = 'submit' value='Submit' class='button btnPush btnL
         }
         writer.println("</body>");
     }
+<<<<<<< HEAD
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -288,6 +340,8 @@ writer.println("<input type = 'submit' value='Submit' class='button btnPush btnL
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+=======
+>>>>>>> first
 
     
 }

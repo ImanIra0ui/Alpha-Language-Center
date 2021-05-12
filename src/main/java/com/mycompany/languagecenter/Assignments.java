@@ -38,6 +38,7 @@ public class Assignments extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+<<<<<<< HEAD
              out.println("<!DOCTYPE html>");
                out.println("<html>");
       out.println("<head>");
@@ -63,6 +64,17 @@ public class Assignments extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
          
+=======
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet Assignments</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet Assignments at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+>>>>>>> first
         }
     }
     
@@ -80,7 +92,10 @@ public class Assignments extends HttpServlet {
         writer.println("<html>");
         writer.println("<head>");
         writer.println("<link rel=\"stylesheet\" href=\"choice.css\">\n");
+<<<<<<< HEAD
            writer.println(" <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"logo.PNG\" >\n");
+=======
+>>>>>>> first
         writer.append("<link href=\"https://fonts.googleapis.com/css2?family=Courgette&display=swap\" rel=\"stylesheet\">\n" +
 "");
            writer.append("<link href=\"https://fonts.googleapis.com/css2?family=Courgette&display=swap\" rel=\"stylesheet\">\n" +
@@ -136,7 +151,11 @@ public class Assignments extends HttpServlet {
                     writer.println("<input  class='nav-element' type='submit' name='fee' value='My Fee Statements'>");
                     writer.println("</form>");
                     writer.println("<br><br><br><br>");
+<<<<<<< HEAD
                       writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i><a href=\"index.html\">Log out</a></div>");
+=======
+                    writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i>  Log out</div>");
+>>>>>>> first
                     writer.println("</div>");
         try {
             Context ctx = new InitialContext();
@@ -220,7 +239,11 @@ public class Assignments extends HttpServlet {
                         }
                         
                         if (c==0) {
+<<<<<<< HEAD
                             writer.println("<h class=\"caption\"> There are not yet any assignments in this course!</h> ");
+=======
+                            writer.println("<h> There are not yet any assignments in this course. </h> ");
+>>>>>>> first
                         }
                         
                         
@@ -236,6 +259,7 @@ public class Assignments extends HttpServlet {
         writer.println(e.toString());
         }
     }
+<<<<<<< HEAD
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -262,6 +286,8 @@ public class Assignments extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+=======
+>>>>>>> first
 
   
 

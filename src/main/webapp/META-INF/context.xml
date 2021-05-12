@@ -2,6 +2,11 @@
 <Context path="/LanguageCenter">
   <Resource auth="Container" driverClassName="org.postgresql.Driver" 
             maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/postgres" 
+<<<<<<< HEAD
             password="rihab2611" type="javax.sql.DataSource" url="jdbc:postgresql://localhost/postgres" 
             username="farhaouir"/>
+=======
+            password="fzl@miri" type="javax.sql.DataSource" url="jdbc:postgresql://localhost/postgres" 
+            username="lamirif"/>
+>>>>>>> first
 </Context>

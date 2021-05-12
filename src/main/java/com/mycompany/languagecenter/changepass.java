@@ -40,6 +40,7 @@ public class changepass extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
+<<<<<<< HEAD
               out.println("<html>");
       out.println("<head>");
         out.println("<link rel=\"stylesheet\" href=\"choice.css\">\n");
@@ -61,6 +62,14 @@ public class changepass extends HttpServlet {
             out.println("<div class=\"errorpic\"><img src=\"error.png\" alt=\"Girl in a jacket\" width=\"300\" height=\"320\"></div>");
             out.println("<h1 class=\"error\">OOPS...</h1>");
             out.println("<h1 class=\"smtg2 error\">something went wrong!</h1>");
+=======
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet changepass</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet changepass at " + request.getContextPath() + "</h1>");
+>>>>>>> first
             out.println("</body>");
             out.println("</html>");
         }
@@ -80,6 +89,7 @@ public class changepass extends HttpServlet {
         PrintWriter writer = response.getWriter();
         writer.println("<html>");
         writer.println("<head>");
+<<<<<<< HEAD
       writer.println("<link rel=\"stylesheet\" href=\"choice.css\">\n");
          writer.println(" <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"logo.PNG\" >\n");
         writer.append("<link href=\"https://fonts.googleapis.com/css2?family=Courgette&display=swap\" rel=\"stylesheet\">\n" +"");
@@ -161,6 +171,10 @@ public class changepass extends HttpServlet {
                         writer.println("</div>");
                  
                     }
+=======
+        writer.println("</head>");
+        writer.println("<body>");
+>>>>>>> first
        
         try {
             Context ctx = new InitialContext();
@@ -185,6 +199,7 @@ public class changepass extends HttpServlet {
                     ResultSet r = st.executeQuery(query);
                     
                     if(r.next()) 
+<<<<<<< HEAD
                         writer.println("<div class=\"boxy\">");
                         writer.println("<button onclick=\"myFunction2()\">Personal Information <i class=\"fa fa-angle-double-down\"></i></button>");
                         writer.println("<div id=\"myDIV2\">");
@@ -221,6 +236,31 @@ public class changepass extends HttpServlet {
                         writer.println("</form>");
                         writer.println("</div>");
                         writer.println("</div>");
+=======
+                        writer.println("First Name: " + r.getString(1));
+                        writer.println("Last Name: " + r.getString(2));
+                        
+                        writer.println("Email: " + r.getString(3));
+                        if(r.getString(4)!=null)
+                            writer.println("Phone number: "+ r.getString(4));
+                        
+                        else
+                            writer.println("Phone number: --");
+                        writer.println("Change password: ");
+                    writer.println("<form method='post' action='changepass' onsubmit=\"alert ('Password changed successfully!');\">");
+                        writer.println("<label>password :\n" +
+"  <input name=\"password\" id=\"password\" type=\"password\" required>\n" +
+"</label>\n" +
+"<br>\n" +
+"<label>confirm password:\n" +
+"  <input type=\"password\" name=\"confirm_password\" id=\"confirm_password\" required>\n" +
+"  <span id='message'></span>"
+                                + "<script src=\"pass.js\"></script>\n" +
+"</label>");
+                        writer.println("<input type='hidden' placeholder='username' name='username' value = " + username + ">");
+                        writer.println("<input type='submit' value = 'Submit changes'>");
+                        writer.println("</form>");
+>>>>>>> first
 
                 }
             }
@@ -230,6 +270,7 @@ public class changepass extends HttpServlet {
         writer.println(e.toString());
         }
     }
+<<<<<<< HEAD
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -256,6 +297,8 @@ public class changepass extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+=======
+>>>>>>> first
 
   
 

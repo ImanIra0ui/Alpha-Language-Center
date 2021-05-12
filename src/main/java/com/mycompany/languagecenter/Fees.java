@@ -40,6 +40,7 @@ public class Fees extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+<<<<<<< HEAD
     out.println("<!DOCTYPE html>");
                out.println("<html>");
       out.println("<head>");
@@ -62,6 +63,15 @@ public class Fees extends HttpServlet {
             out.println("<div class=\"errorpic\"><img src=\"error.png\" alt=\"Girl in a jacket\" width=\"300\" height=\"320\"></div>");
             out.println("<h1 class=\"error\">OOPS...</h1>");
             out.println("<h1 class=\"smtg2 error\">something went wrong!</h1>");
+=======
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet Fees</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet Fees at " + request.getContextPath() + "</h1>");
+>>>>>>> first
             out.println("</body>");
             out.println("</html>");
         }
@@ -82,7 +92,10 @@ public class Fees extends HttpServlet {
         writer.println("<html>");
         writer.println("<head>");
          writer.println("<link rel=\"stylesheet\" href=\"choice.css\">\n");
+<<<<<<< HEAD
             writer.println(" <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"logo.PNG\" >\n");
+=======
+>>>>>>> first
         writer.append("<link href=\"https://fonts.googleapis.com/css2?family=Courgette&display=swap\" rel=\"stylesheet\">\n" +
 "");
         writer.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"></script>");
@@ -136,7 +149,11 @@ public class Fees extends HttpServlet {
                     writer.println("<input  class='nav-element' type='submit' name='fee' value='My Fee Statements'>");
                     writer.println("</form>");
                     writer.println("<br><br><br><br>");
+<<<<<<< HEAD
                       writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i><a href=\"index.html\">Log out</a></div>");
+=======
+                    writer.println("<div class=\"bottom\"><i class=\"fa fa-sign-out\"></i>  Log out</div>");
+>>>>>>> first
                     writer.println("</div>");
        
         try {
@@ -186,6 +203,7 @@ public class Fees extends HttpServlet {
         writer.println("</body>");
     }
 
+<<<<<<< HEAD
   // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -212,6 +230,9 @@ public class Fees extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+=======
+  
+>>>>>>> first
     
 
 }
