@@ -1,0 +1,338 @@
+table{
+     background-color: rgb(226, 208, 217,0.95);
+
+}
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 75%;
+  margin: auto;
+  color: #402634;
+  background-color:  rgb(226, 208, 217,0.95);
+
+}
+
+#customers td, #customers th {
+  padding: 8px;
+   border-bottom: 1px solid #154360;
+}
+
+
+#customers tr:hover {background-color: rgb(207, 175, 192);}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+.caption{ 
+    font-family: 'Courgette', cursive;
+    color:#ddd;
+    font-size: 35px;
+    margin: auto;
+    text-align: center;
+}
+.cap{
+    font-family: 'Courgette', cursive;
+    color: #402634;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    
+}
+.cap2{
+    font-family: 'Courgette', cursive;
+    color: #402634;
+    font-size: 20px;
+    margin: auto;
+    
+}
+
+#myDiv{
+    display :none;
+    margin-left: 20px;
+}
+#myDiv2{
+    margin-left: 20px;
+}
+
+
+
+html{
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://eitrawmaterials.eu/wp-content/uploads/2019/05/Label-brochure-1.jpg");
+   background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: opacity(80%);
+    padding: 0;
+}
+body{
+  margin: 0;
+  height: 100vh;
+  background-color: rgba(38, 40, 43, 0.2);
+}
+#sideBar{
+   font-family:sans-serif;
+   width: 20%;
+   float:  left;
+   background-color: rgba(38, 40, 43, 0.6);
+   height: 100%;
+   
+  }
+  .topnav {
+    background-color:rgb(89, 41, 64,0.7);
+    overflow: hidden;
+    height: 10vh;
+    margin: 0;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 19px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    height: 1Ovh;
+    padding-bottom: 35px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color:  rgba(240, 248, 255, 0.795);
+    color:  #aa7594;
+  }
+  
+  #logo{
+    font-size: 30px;
+    font-family: 'Courgette', cursive;
+    float: left;
+    color: #f2f2f2;
+    margin-left: 19px;
+    margin-top: 14px;
+  }
+  .bottom{
+    font-size: 23px;
+    font-weight: 400;
+    color:   rgba(240, 248, 255);
+    margin: 20px;
+    padding: 10px;
+    vertical-align: middle;
+    border-top: 1px solid     rgba(240, 248, 255);    
+
+  }
+  .bottom:hover{
+    background:rgb(226, 208, 217,0.8);
+   
+    color: #402634;
+  }
+  .nav-element{
+    width:90%;
+    color:  rgba(240, 248, 255, 0.795);
+    margin: 10px;
+    padding: 10px;
+    vertical-align: middle;
+
+  }
+  section{
+  margin: auto;
+  width: 50%;
+  color:  rgba(240, 248, 255, 0.795);
+  padding: 10px;
+  margin-left: 45%;
+  margin-top: 10%;
+  font-size: 25px;
+  font-family:sans-serif;
+}
+.error{
+  width:60%;
+  margin-left: 16%;
+  color:  rgba(240, 248, 255, 0.795);
+  padding: 10px;
+  padding-top: 100px;
+  font-size: 40px;
+  font-family:sans-serif;
+}
+.error a{
+    color:#DA70D6;
+}
+.error a:hover{
+    color:#DA70D6;
+}
+.errorpic{
+   padding-left: 200px;
+   margin-top: 60px;
+   width:30%;
+   float:left;
+}
+  input[type="submit"] {
+	background: none;
+	background-color:  transparent;
+	border: none;
+	padding: 20px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+        text-align: left;
+}
+  .nav-element:hover{
+
+    background:rgb(226, 208, 217,0.8);
+    border-radius: 25px;
+    color: #402634;  }
+
+  .nav-element img{
+    height: 3rem;
+    width:  3rem;
+    border-radius: 150px;
+    flex:1;
+  }
+  .nav-element span{
+    font-size: 20px;
+    margin-left: 15px;
+    flex:3;
+
+  }
+  .flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+button {
+  font-size: 1.5rem;
+  font-weight: 600;
+ font-family: 'Courgette', cursive;
+  letter-spacing: 0.15rem;
+  color: #f2f2f2;
+ background-color: rgb(89, 41, 64);
+  padding: 20px 30px;
+  width: 100%;
+  margin: 0px;
+
+  border: none;
+  cursor: pointer;
+}
+.non{
+    background-color: rgb(217, 215, 215);
+}
+input.button {
+  display: block; 
+  background-color: #7e586e!important;
+  position: relative;
+  width: 220px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  color: #f2f2f2;
+  transition: all 0.2s ;
+}
+
+.btnBlueGreen {
+  color:rgba(240, 248, 255, 0.795);
+  background:  rgb(89, 41, 64,0.6);
+}
+.btnLightBlue {
+  color: rgba(240, 248, 255, 0.795);
+  background: rgb(89, 41, 64,0.6);
+}
+
+.btnBlueGreen.btnPush {
+  box-shadow:  0px 5px 0px 0px rgb(89, 41, 64,0.7);
+}
+
+.btnLightBlue.btnPush {
+  box-shadow:  0px 5px 0px 0px rgb(89, 41, 64,0.7);
+}
+.btnPush:hover {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.btnBlueGreen.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px rgb(89, 41, 64,0.7);;
+}
+
+.btnLightBlue.btnPush:hover {
+  box-shadow:0px 0px 0px 0px rgb(89, 41, 64,0.7);;
+}
+
+.boxy{
+    float: right;
+    margin-right: 10%;
+    margin-top: 2%;
+    width: 60%;
+   background-color: rgb(226, 208, 217,0.8);
+    border-radius:15px;
+}
+.boxy2{
+    float: right;
+    margin-right: 20%;
+    margin-top: 2%;
+    width: 40%;
+     background-color: rgb(226, 208, 217,0.8);
+    border-radius:15px;
+}
+.boxy3{
+     float: right;
+    margin-top: 2%;
+    width:60%;
+    margin-right: 10%;
+    background-color: rgb(226, 208, 217,0.8);
+    border-radius:15px;
+}
+
+.asg{
+    margin-left: 10%;
+}
+textArea{
+    height:100px;
+    width: 350px;
+}
+.middle{
+    margin-left: 100px;
+}
+.frm{
+    padding-left: 25px;
+}
+.mid{
+    margin-left: 50% !important; 
+}
+.smtg{
+    margin-left: 50%;
+}
+.smtg2{
+    margin-left: 38%;
+}
+.idk{
+    padding-right: 40px;
+}
+.err{
+    font-family: 'Courgette', cursive;
+    color: red;
+    font-size: 18px;
+    margin-left: 20px;
+ 
+}
+.bottom a{
+    text-decoration: none;
+    color:inherit;
+}
+.grid{
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: auto auto auto;
+}
+.len{
+    height:200%
+}
